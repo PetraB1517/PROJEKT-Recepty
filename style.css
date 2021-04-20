@@ -33,3 +33,133 @@ Nastav je receptům jako obrázky na pozadí (tj. nepřidávej je jako <img> do 
 Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
 Flexboxy mohou být vnořené do sebe, klidně několikrát.
 */
+body{
+  margin: 0;
+  padding: 0;
+  color:white;
+  background-color: white;
+
+}
+.hlavicka{
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.komenty{
+  margin: 10px;
+}
+.sekce{
+  margin:10px;
+}
+.recept{
+  background-size: cover;
+  background-position: center;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.hlavni{
+  background-image: linear-gradient(rgba(26, 25, 25, 0.4),rgba(31, 28, 28, 0.38)), url(images/salat.jpg);
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  
+}
+
+.jedna {
+  background-image: linear-gradient(rgba(26, 25, 25, 0.4),rgba(31, 28, 28, 0.38)), url(images/chlebicek.jpg);
+}
+.dva {
+  background-image: linear-gradient(rgba(26, 25, 25, 0.4),rgba(31, 28, 28, 0.38)), url(images/tacos.jpg);
+}
+.tri {
+  background-image: linear-gradient(rgba(26, 25, 25, 0.4),rgba(31, 28, 28, 0.38)), url(images/cizrna.jpg);
+}
+.ctyri {
+  background-image: linear-gradient(rgba(26, 25, 25, 0.4),rgba(31, 28, 28, 0.38)), url(images/burger.jpg);
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  margin: 15px 10px;
+}
+
+h1{
+  font-size: 28px;
+}
+
+h2{
+  font-size: 18px;
+}
+
+@media screen and (min-width: 480px) {
+  h1{
+    font-size: 36px;
+  }
+  
+  h2{
+    font-size: 22px;
+  }
+
+  .komenty{
+    margin: 20px;
+  }
+  .sekce{
+    margin:20px;
+  }
+  
+  .recepty{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .recept{
+    min-height: 150px;
+    flex: 0 0 calc((100% - 2px)/2);
+  }
+
+  .hlavni{
+    min-height: 250px;
+    flex: 0 0 100%;
+  }
+  
+
+}
+
+@media screen and (min-width:860px){
+  h1{
+    font-size: 48px;
+  }
+  
+  h2{
+    font-size: 28px;
+  }
+  .body{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .recepty{
+    flex: 0 0 calc((100% - 2px)*2/3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .recept{
+    min-height: 200px;
+    flex: 0 0 calc((100% - 2px)/2);
+  }
+
+  .hlavni{
+    min-height: 400px;
+    flex: 0 0 calc((100% - 2px)/3);
+  }
+
+}
